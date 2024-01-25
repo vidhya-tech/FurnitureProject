@@ -6,58 +6,59 @@ import { CiShoppingCart } from "react-icons/ci";
 
 function App() {
   return (
-    <div className="App">
-       <Router>
-      <div className="container-navbar">
-        <span className='heading'>Edgecut</span>
+    <>
+    
+    <div class="hero_area">
+    
 
-        <nav className='navbar'>
-          <ul className='navbarssection'>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/furniture">Furnitures</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/blog">Blog</Link></li>
-            <li><Link to="/contact">Contactus</Link></li>
-            <li>
-              <Link to="/cart" className='shopcart'><CiShoppingCart  size="30px" /></Link>
-            </li>
-            <div className="quote_btn-container">
-            <Link to="/Login">
-              <span className='login'>Login</span>
-              <i className="fa fa-user" aria-hidden="true"></i>
-            </Link>
-            <form className="form-inline">
-             
-                <i className="fa fa-search" aria-hidden="true"></i>
-              
+    <header class="header_section long_section px-0">
+      <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <a class="navbar-brand" href="index.html">
+          <span>
+            Edgecut
+          </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""> </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+            <ul class="navbar-nav  ">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"> About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="furniture.html">Furnitures</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="quote_btn-container">
+            <a href="">
+              <span>
+                Login
+              </span>
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </a>
+            <form class="form-inline">
+              <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
             </form>
           </div>
-          </ul>
-
-          
-        </nav>
-      </div>
-
-      <Routes>
-        <Route
-          path="/"
-        
-        />
-        <Route path="/furniture" />
-        <Route path="/about"  />
-        <Route path="/blog" 
-        />
-        <Route
-          path="/contact"
-        
-        />
-         <Route path="/cart"  />
-         <Route path="/login" />
-      </Routes>
-      
-     
-    </Router>
-    </div>
+        </div>
+      </nav>
+    </header>
+    </>
   );
 }
 
