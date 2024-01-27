@@ -1,60 +1,37 @@
-/* App.css */
-
- 
-
-.container-navbar.heading {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-top: 50px;
-}
-
-
-.navbarssection {
-  color: black;
-  list-style: none;
-  display: flex;
-  justify-content: center; /* Center the navigation links horizontally */
+*{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
 
-
-.navbarssection li {
-  margin-right: 40px;
-}
-
-.navbarssection li a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-
-.shopcart,
-.login {
+li,a{
+  font-weight: 500;
+  font-size: 16px;
   color: black;
   text-decoration: none;
-  margin-left: 10px;
 }
 
-
-.login {
-  color: black;
-  text-decoration: none;
-  margin-left: 500px; 
-}
-
-.form-inline {
-  text-decoration: none;
+header{
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin-left: auto; /* Align to the right */
+  padding: 10px 5%;
 }
-
-/* Default style for the search icon */
-.fa-search {
+.navlinks{
+  list-style: none;
+}
+.navlinks li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+.navlinks li a{
+  transform: all 0.3s ease 0s;
+}
+.navlinks li :hover
+{
   color: black;
-  font-size: 18px;
 }
-
-
-/* Add more styles as needed */
+.searchicon {
+  margin-top: 15px;
+}
