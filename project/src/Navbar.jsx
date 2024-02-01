@@ -1,47 +1,38 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import { BrowserRouter as Link } from 'react-router-dom';
-import { IoIosSearch } from "react-icons/io";
+import React from 'react';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { CiShoppingCart } from "react-icons/ci";
+import { IoIosSearch } from "react-icons/io";
+import './App.css'
 
-function Navbarexample() {
+const Header = ({ cartItemCount }) => {
   return (
-    <div>
-       <Navbar expand="lg" className="bg-body-tertiary">
-      <Container className='navheading'>
-      <span className='logo'>
-            Edgecut
-          </span>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <header>
-          <Nav className="me-auto">
-          <ul className='navlinks'>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/furniture">Furnitures</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/blog">Blog</Link></li>
-              <li><Link to="/contact">Contact Us</Link></li>
-              <Link to="/cart" className='shopcart'>
+    <Router>
+      <Navbar expand="lg" className="bg-body-tertiary">
+        <Container>
+          <Navbar.Brand href="/">Edgecut</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto mx-auto"> {/* Apply mx-auto class for horizontal center alignment */}
+              <Nav.Link as={Link} to="/">Home</Nav.Link>
+              <Nav.Link as={Link} to="/furniture">Furnitures</Nav.Link>
+              <Nav.Link as={Link} to="/about">About</Nav.Link>
+              <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
+              <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
+              <Nav.Link as={Link} to="/cart" className="shopcart">
                 <CiShoppingCart size="30px" />
-              
-              </Link>
-            </ul>
+                {cartItemCount > 0 && <span className="cart-notification">{cartItemCount}</span>}
+              </Nav.Link>
             </Nav>
-          <ul className='navlinks'>
-            <li className='login'><Link to='/login'>LOGIN</Link>  <i className="fa-solid fa-user"></i></li>
-            <li><IoIosSearch className='searchicon' size="20px" /></li>
-          </ul>
-        
-         
-          </header>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-    </div>
-  )
-}
+            <Nav>
+              <Nav.Link as={Link} to="/login" className="login">LOGIN <i className="fa-solid fa-user"></i></Nav.Link>
+              <Nav.Link><IoIosSearch className="searchicon" size="20px" /></Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </Router>
+  );
+};
 
-export default Navbarexample
+export default Header;
