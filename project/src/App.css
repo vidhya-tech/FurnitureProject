@@ -2,21 +2,20 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
-}
 
-li,a{
-  font-weight: 500;
-  font-size: 16px;
-  color: black;
-  text-decoration: none;
 }
-
-header{
+li Link ,.navlinks{
+ font-weight: 500;
+ font-size: 16px;
+ color: black;
+ text-decoration: none;
+}
+Nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 5%;
+  padding: 30px 10%;
+
 }
 .navlinks{
   list-style: none;
@@ -24,14 +23,4 @@ header{
 .navlinks li{
   display: inline-block;
   padding: 0px 20px;
-}
-.navlinks li a{
-  transform: all 0.3s ease 0s;
-}
-.navlinks li :hover
-{
-  color: black;
-}
-.searchicon {
-  margin-top: 15px;
 }
